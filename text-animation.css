@@ -1,0 +1,43 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgb(113, 240, 198);
+        }
+        
+        .vk {
+            position: relative;
+            font-size: 5em;
+            font-weight: 1000;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgb(113, 240, 198);
+            font-family: 'Bruno Ace SC', cursive;
+            -webkit-text-stroke: 0.1vw rgb(194, 129, 75);
+        }
+        
+        .vk::before {
+            content: attr(data-text);
+            position: absolute;
+            color: rgb(194, 129, 75);
+            border-right: 10px solid rgb(194, 129, 75);
+            left: 0;
+            overflow: hidden;
+            animation: animate 4s linear infinite backwards;
+        }
+        
+        @keyframes animate {
+            0%,10%,100% {
+                width: 0%;
+            }
+            70%,90%{
+                width: 100%;
+            }
+        }
